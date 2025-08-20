@@ -1,0 +1,75 @@
+TrackTots Complete Pinout - ESP32 Based Project
+
+
+---
+
+1. MAX30100 Heartbeat Sensor (I2C Connection):
+
+SDA -> GPIO 21
+
+SCL -> GPIO 22
+
+VCC -> 3.3V
+
+GND -> GND
+
+
+2. KY-038 Sound Sensor (HW-484 V0.2):
+
+A0 (Analog Out) -> GPIO 34
+
+VCC -> 3.3V
+
+GND -> GND
+
+
+3. Push Button:
+
+Signal -> GPIO 35
+
+VCC -> (Pull-up to 3.3V if needed)
+
+GND -> GND
+
+
+4. SIM800L GSM Module (UART1):
+
+TX (SIM800L TX -> ESP32 RX) -> GPIO 27
+
+RX (SIM800L RX -> ESP32 TX) -> GPIO 26
+
+VCC -> via Step-Up Module (~4V, 2A capable)
+
+GND -> GND
+
+
+5. NEO-6M GPS Module (UART2):
+
+TX (GPS TX -> ESP32 RX2) -> GPIO 16
+
+RX (GPS RX -> ESP32 TX2) -> GPIO 17
+
+VCC -> 3.3V or 5V (based on module version)
+
+GND -> GND
+
+
+6. Power Supply:
+
+Rechargeable Battery Pack -> 3.7V (Boosted where necessary for SIM800L)
+
+
+
+---
+
+Quick Summary:
+
+I2C: MAX30100 -> GPIO 21 (SDA), GPIO 22 (SCL)
+
+Analog Input: KY-038 -> GPIO 34
+
+Digital Input: Push Button -> GPIO 35
+
+UART1: SIM800L -> GPIO 27 (RX), GPIO 26 (TX)
+
+UART2: GPS -> GPIO 16 (RX2), GPIO 17 (TX2)
